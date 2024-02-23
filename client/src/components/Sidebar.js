@@ -56,6 +56,7 @@ const SidebarContainer = styled.div`
     width : 250px;
     background-color: #2F4050;
     padding:0%;
+    display:fixed;
     }
     .SidebarList{
         margin:0%;
