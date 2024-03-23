@@ -1,44 +1,36 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
 import Sidebar from '../components/Sidebar';
-import styled from "styled-components";
-
-function AddProduct() {
-  const handleClick = () => {
-    console.log('Button clicked!');
-  };
-  return (
-    <div>
-      <AddContainer>
-      <Sidebar/>
-        <div className='addbtn'>
-          <button onClick={handleClick}>
-            Add Product
-          </button>
-        </div>
-      </AddContainer>
-    </div>
-  )
-}
-
-const AddContainer = styled.div`
-  display:flex;
-  flex-direction:row;
-  align-items: center;
-  button{
-    height:50px;
-    width:150px;
-    background-color: #cbd3d4;
-    padding:10px;
-    margin-left:550px;
-    border: 2px solid black;
-    border-radius:15px;
-    font-family : 'Trebuchet MS' , 'Lucida Grande', Arial , sans-serif;
-    font-size:18px;
-  }
-  button:hover{
-    color:white;
-    cursor:pointer;
-    background-color:#293846;
-  }
+import AddProductComponent from '../components/AddProductComponent';
+// Define the styled components
+const Dashboard = styled.div`
+ display: flex;
+ height: 100vh;
 `;
+
+const SidebarContainer = styled.div`
+ width: 20%;
+ height: 100%;
+ background-color: #f0f0f0; // Example background color
+`;
+
+const Content = styled.div`
+ flex-grow: 1;
+ background-color: #fff; // Example background color
+`;
+
+// Define the AddProduct component
+const AddProduct = () => {
+ return (
+    <Dashboard>
+      <SidebarContainer>
+        <Sidebar/>
+      </SidebarContainer>
+      <Content>
+        <AddProductComponent/>
+      </Content>
+    </Dashboard>
+ );
+};
+
 export default AddProduct;

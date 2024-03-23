@@ -1,11 +1,35 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
 import Sidebar from '../components/Sidebar';
-function Tax() {
-  return (
-    <div>
-      <Sidebar/>
-    </div>
-  )
-}
+// Define the styled components
+const Dashboard = styled.div`
+ display: flex;
+ height: 100vh;
+`;
+
+const SidebarContainer = styled.div`
+ width: 20%;
+ height: 100%;
+ background-color: #f0f0f0; // Example background color
+`;
+
+const Content = styled.div`
+ flex-grow: 1;
+ background-color: #fff; // Example background color
+`;
+
+// Define the Tax component
+const Tax = () => {
+ return (
+    <Dashboard>
+      <SidebarContainer>
+        <Sidebar/>
+      </SidebarContainer>
+      <Content>
+        Te idhrr tax dikhawangaa
+      </Content>
+    </Dashboard>
+ );
+};
 
 export default Tax;
